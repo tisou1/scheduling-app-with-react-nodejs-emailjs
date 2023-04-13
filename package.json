@@ -1,0 +1,19 @@
+{
+  "name": "scheduling-app-with-react-nodejs-emailjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.38.0",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.4"
+  }
+}
