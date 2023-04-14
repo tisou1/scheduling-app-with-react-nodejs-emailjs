@@ -14,6 +14,9 @@ importers:
       '@antfu/eslint-config':
         specifier: ^0.38.4
         version: registry.npm.baidu-int.com/@antfu/eslint-config@0.38.4(eslint@8.38.0)(typescript@5.0.4)
+      '@types/node':
+        specifier: ^18.15.11
+        version: registry.npm.baidu-int.com/@types/node@18.15.11
 
   client:
     dependencies:
@@ -38,6 +41,13 @@ importers:
       nodemon:
         specifier: ^2.0.22
         version: registry.npm.baidu-int.com/nodemon@2.0.22
+    devDependencies:
+      '@types/express':
+        specifier: ^4.17.17
+        version: registry.npm.baidu-int.com/@types/express@4.17.17
+      ts-node:
+        specifier: ^10.9.1
+        version: registry.npm.baidu-int.com/ts-node@10.9.1(@types/node@18.15.11)(typescript@5.0.4)
 
 packages:
 
@@ -208,6 +218,15 @@ packages:
       '@babel/helper-validator-identifier': registry.npm.baidu-int.com/@babel/helper-validator-identifier@7.19.1
       to-fast-properties: registry.npm.baidu-int.com/to-fast-properties@2.0.0
     dev: false
+
+  registry.npm.baidu-int.com/@cspotcode/source-map-support@0.8.1:
+    resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@cspotcode%2fsource-map-support/-/source-map-support-0.8.1.tgz}
+    name: '@cspotcode/source-map-support'
+    version: 0.8.1
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/trace-mapping': registry.npm.baidu-int.com/@jridgewell/trace-mapping@0.3.9
+    dev: true
 
   registry.npm.baidu-int.com/@emotion/babel-plugin@11.10.6:
     resolution: {integrity: sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@emotion%2fbabel-plugin/-/babel-plugin-11.10.6.tgz}
@@ -400,6 +419,28 @@ packages:
     name: '@humanwhocodes/object-schema'
     version: 1.2.1
 
+  registry.npm.baidu-int.com/@jridgewell/resolve-uri@3.1.1:
+    resolution: {integrity: sha512-dSYZh7HhCDtCKm4QakX0xFpsRDqjjtZf/kjI/v3T3Nwt5r8/qz/M19F9ySyOqU94SXBmeG9ttTul+YnR4LOxFA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@jridgewell%2fresolve-uri/-/resolve-uri-3.1.1.tgz}
+    name: '@jridgewell/resolve-uri'
+    version: 3.1.1
+    engines: {node: '>=6.0.0'}
+    dev: true
+
+  registry.npm.baidu-int.com/@jridgewell/sourcemap-codec@1.4.15:
+    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@jridgewell%2fsourcemap-codec/-/sourcemap-codec-1.4.15.tgz}
+    name: '@jridgewell/sourcemap-codec'
+    version: 1.4.15
+    dev: true
+
+  registry.npm.baidu-int.com/@jridgewell/trace-mapping@0.3.9:
+    resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@jridgewell%2ftrace-mapping/-/trace-mapping-0.3.9.tgz}
+    name: '@jridgewell/trace-mapping'
+    version: 0.3.9
+    dependencies:
+      '@jridgewell/resolve-uri': registry.npm.baidu-int.com/@jridgewell/resolve-uri@3.1.1
+      '@jridgewell/sourcemap-codec': registry.npm.baidu-int.com/@jridgewell/sourcemap-codec@1.4.15
+    dev: true
+
   registry.npm.baidu-int.com/@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@nodelib%2ffs.scandir/-/fs.scandir-2.1.5.tgz}
     name: '@nodelib/fs.scandir'
@@ -431,6 +472,68 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
+  registry.npm.baidu-int.com/@tsconfig/node10@1.0.9:
+    resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@tsconfig%2fnode10/-/node10-1.0.9.tgz}
+    name: '@tsconfig/node10'
+    version: 1.0.9
+    dev: true
+
+  registry.npm.baidu-int.com/@tsconfig/node12@1.0.11:
+    resolution: {integrity: sha512-cqefuRsh12pWyGsIoBKJA9luFu3mRxCA+ORZvA4ktLSzIuCUtWVxGIuXigEwO5/ywWFMZ2QEGKWvkZG1zDMTag==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@tsconfig%2fnode12/-/node12-1.0.11.tgz}
+    name: '@tsconfig/node12'
+    version: 1.0.11
+    dev: true
+
+  registry.npm.baidu-int.com/@tsconfig/node14@1.0.3:
+    resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@tsconfig%2fnode14/-/node14-1.0.3.tgz}
+    name: '@tsconfig/node14'
+    version: 1.0.3
+    dev: true
+
+  registry.npm.baidu-int.com/@tsconfig/node16@1.0.3:
+    resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@tsconfig%2fnode16/-/node16-1.0.3.tgz}
+    name: '@tsconfig/node16'
+    version: 1.0.3
+    dev: true
+
+  registry.npm.baidu-int.com/@types/body-parser@1.19.2:
+    resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fbody-parser/-/body-parser-1.19.2.tgz}
+    name: '@types/body-parser'
+    version: 1.19.2
+    dependencies:
+      '@types/connect': registry.npm.baidu-int.com/@types/connect@3.4.35
+      '@types/node': registry.npm.baidu-int.com/@types/node@18.15.11
+    dev: true
+
+  registry.npm.baidu-int.com/@types/connect@3.4.35:
+    resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fconnect/-/connect-3.4.35.tgz}
+    name: '@types/connect'
+    version: 3.4.35
+    dependencies:
+      '@types/node': registry.npm.baidu-int.com/@types/node@18.15.11
+    dev: true
+
+  registry.npm.baidu-int.com/@types/express-serve-static-core@4.17.33:
+    resolution: {integrity: sha512-TPBqmR/HRYI3eC2E5hmiivIzv+bidAfXofM+sbonAGvyDhySGw9/PQZFt2BLOrjUUR++4eJVpx6KnLQK1Fk9tA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fexpress-serve-static-core/-/express-serve-static-core-4.17.33.tgz}
+    name: '@types/express-serve-static-core'
+    version: 4.17.33
+    dependencies:
+      '@types/node': registry.npm.baidu-int.com/@types/node@18.15.11
+      '@types/qs': registry.npm.baidu-int.com/@types/qs@6.9.7
+      '@types/range-parser': registry.npm.baidu-int.com/@types/range-parser@1.2.4
+    dev: true
+
+  registry.npm.baidu-int.com/@types/express@4.17.17:
+    resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fexpress/-/express-4.17.17.tgz}
+    name: '@types/express'
+    version: 4.17.17
+    dependencies:
+      '@types/body-parser': registry.npm.baidu-int.com/@types/body-parser@1.19.2
+      '@types/express-serve-static-core': registry.npm.baidu-int.com/@types/express-serve-static-core@4.17.33
+      '@types/qs': registry.npm.baidu-int.com/@types/qs@6.9.7
+      '@types/serve-static': registry.npm.baidu-int.com/@types/serve-static@1.15.1
+    dev: true
+
   registry.npm.baidu-int.com/@types/json-schema@7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fjson-schema/-/json-schema-7.0.11.tgz}
     name: '@types/json-schema'
@@ -451,6 +554,18 @@ packages:
       '@types/unist': registry.npm.baidu-int.com/@types/unist@2.0.6
     dev: true
 
+  registry.npm.baidu-int.com/@types/mime@3.0.1:
+    resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fmime/-/mime-3.0.1.tgz}
+    name: '@types/mime'
+    version: 3.0.1
+    dev: true
+
+  registry.npm.baidu-int.com/@types/node@18.15.11:
+    resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fnode/-/node-18.15.11.tgz}
+    name: '@types/node'
+    version: 18.15.11
+    dev: true
+
   registry.npm.baidu-int.com/@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fnormalize-package-data/-/normalize-package-data-2.4.1.tgz}
     name: '@types/normalize-package-data'
@@ -468,6 +583,18 @@ packages:
     name: '@types/prop-types'
     version: 15.7.5
     dev: false
+
+  registry.npm.baidu-int.com/@types/qs@6.9.7:
+    resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fqs/-/qs-6.9.7.tgz}
+    name: '@types/qs'
+    version: 6.9.7
+    dev: true
+
+  registry.npm.baidu-int.com/@types/range-parser@1.2.4:
+    resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2frange-parser/-/range-parser-1.2.4.tgz}
+    name: '@types/range-parser'
+    version: 1.2.4
+    dev: true
 
   registry.npm.baidu-int.com/@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2freact-transition-group/-/react-transition-group-4.4.5.tgz}
@@ -497,6 +624,15 @@ packages:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fsemver/-/semver-7.3.13.tgz}
     name: '@types/semver'
     version: 7.3.13
+    dev: true
+
+  registry.npm.baidu-int.com/@types/serve-static@1.15.1:
+    resolution: {integrity: sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@types%2fserve-static/-/serve-static-1.15.1.tgz}
+    name: '@types/serve-static'
+    version: 1.15.1
+    dependencies:
+      '@types/mime': registry.npm.baidu-int.com/@types/mime@3.0.1
+      '@types/node': registry.npm.baidu-int.com/@types/node@18.15.11
     dev: true
 
   registry.npm.baidu-int.com/@types/unist@2.0.6:
@@ -682,6 +818,13 @@ packages:
     dependencies:
       acorn: registry.npm.baidu-int.com/acorn@8.8.2
 
+  registry.npm.baidu-int.com/acorn-walk@8.2.0:
+    resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/acorn-walk/-/acorn-walk-8.2.0.tgz}
+    name: acorn-walk
+    version: 8.2.0
+    engines: {node: '>=0.4.0'}
+    dev: true
+
   registry.npm.baidu-int.com/acorn@8.8.2:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/acorn/-/acorn-8.8.2.tgz}
     name: acorn
@@ -730,6 +873,12 @@ packages:
       normalize-path: registry.npm.baidu-int.com/normalize-path@3.0.0
       picomatch: registry.npm.baidu-int.com/picomatch@2.3.1
     dev: false
+
+  registry.npm.baidu-int.com/arg@4.1.3:
+    resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/arg/-/arg-4.1.3.tgz}
+    name: arg
+    version: 4.1.3
+    dev: true
 
   registry.npm.baidu-int.com/argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/argparse/-/argparse-2.0.1.tgz}
@@ -1070,6 +1219,12 @@ packages:
       yaml: registry.npm.baidu-int.com/yaml@1.10.2
     dev: false
 
+  registry.npm.baidu-int.com/create-require@1.1.1:
+    resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/create-require/-/create-require-1.1.1.tgz}
+    name: create-require
+    version: 1.1.1
+    dev: true
+
   registry.npm.baidu-int.com/cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/cross-spawn/-/cross-spawn-7.0.3.tgz}
     name: cross-spawn
@@ -1162,6 +1317,13 @@ packages:
     version: 1.2.0
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
     dev: false
+
+  registry.npm.baidu-int.com/diff@4.0.2:
+    resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/diff/-/diff-4.0.2.tgz}
+    name: diff
+    version: 4.0.2
+    engines: {node: '>=0.3.1'}
+    dev: true
 
   registry.npm.baidu-int.com/dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/dir-glob/-/dir-glob-3.0.1.tgz}
@@ -2635,6 +2797,12 @@ packages:
       yallist: registry.npm.baidu-int.com/yallist@4.0.0
     dev: true
 
+  registry.npm.baidu-int.com/make-error@1.3.6:
+    resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/make-error/-/make-error-1.3.6.tgz}
+    name: make-error
+    version: 1.3.6
+    dev: true
+
   registry.npm.baidu-int.com/mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz}
     name: mdast-util-from-markdown
@@ -3690,6 +3858,40 @@ packages:
       nopt: registry.npm.baidu-int.com/nopt@1.0.10
     dev: false
 
+  registry.npm.baidu-int.com/ts-node@10.9.1(@types/node@18.15.11)(typescript@5.0.4):
+    resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/ts-node/-/ts-node-10.9.1.tgz}
+    id: registry.npm.baidu-int.com/ts-node/10.9.1
+    name: ts-node
+    version: 10.9.1
+    hasBin: true
+    peerDependencies:
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
+      '@types/node': '*'
+      typescript: '>=2.7'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      '@swc/wasm':
+        optional: true
+    dependencies:
+      '@cspotcode/source-map-support': registry.npm.baidu-int.com/@cspotcode/source-map-support@0.8.1
+      '@tsconfig/node10': registry.npm.baidu-int.com/@tsconfig/node10@1.0.9
+      '@tsconfig/node12': registry.npm.baidu-int.com/@tsconfig/node12@1.0.11
+      '@tsconfig/node14': registry.npm.baidu-int.com/@tsconfig/node14@1.0.3
+      '@tsconfig/node16': registry.npm.baidu-int.com/@tsconfig/node16@1.0.3
+      '@types/node': registry.npm.baidu-int.com/@types/node@18.15.11
+      acorn: registry.npm.baidu-int.com/acorn@8.8.2
+      acorn-walk: registry.npm.baidu-int.com/acorn-walk@8.2.0
+      arg: registry.npm.baidu-int.com/arg@4.1.3
+      create-require: registry.npm.baidu-int.com/create-require@1.1.1
+      diff: registry.npm.baidu-int.com/diff@4.0.2
+      make-error: registry.npm.baidu-int.com/make-error@1.3.6
+      typescript: registry.npm.baidu-int.com/typescript@5.0.4
+      v8-compile-cache-lib: registry.npm.baidu-int.com/v8-compile-cache-lib@3.0.1
+      yn: registry.npm.baidu-int.com/yn@3.1.1
+    dev: true
+
   registry.npm.baidu-int.com/tsconfig-paths@3.14.2:
     resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz}
     name: tsconfig-paths
@@ -3842,6 +4044,12 @@ packages:
     engines: {node: '>= 0.4.0'}
     dev: false
 
+  registry.npm.baidu-int.com/v8-compile-cache-lib@3.0.1:
+    resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz}
+    name: v8-compile-cache-lib
+    version: 3.0.1
+    dev: true
+
   registry.npm.baidu-int.com/validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz}
     name: validate-npm-package-license
@@ -3961,6 +4169,13 @@ packages:
     name: yaml
     version: 2.2.1
     engines: {node: '>= 14'}
+    dev: true
+
+  registry.npm.baidu-int.com/yn@3.1.1:
+    resolution: {integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/yn/-/yn-3.1.1.tgz}
+    name: yn
+    version: 3.1.1
+    engines: {node: '>=6'}
     dev: true
 
   registry.npm.baidu-int.com/yocto-queue@0.1.0:
