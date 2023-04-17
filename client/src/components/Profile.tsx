@@ -1,8 +1,14 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export default function Profile() {
   const { id } = useParams()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!localStorage.getItem('_id'))
+      navigate('/')
+  }, [navigate])
 
   return (
      <main className='profile'>

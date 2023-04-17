@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { handleRegister } from '../utils/resource'
 
 export default function Signup() {
   const [username, setUsername] = useState('')
@@ -12,6 +13,7 @@ export default function Signup() {
     if (username.trim()
       && password.trim()
       && email.trim()) {
+      handleRegister(email, username, password, navigate)
       console.log(email, username, password)
       setPassword('')
       setUsername('')

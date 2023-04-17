@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TimezoneSelect from 'react-timezone-select'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -40,6 +40,11 @@ export default function Dashboard() {
     else
       toast.error('Select your timezone')
   }
+
+  useEffect(() => {
+    if (!localStorage.getItem('_id'))
+      navigate('/')
+  }, [navigate])
 
   return (
     <div>

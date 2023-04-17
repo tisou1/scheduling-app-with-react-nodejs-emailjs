@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { Link, useNavigate } from 'react-router-dom'
+import { handleLogin } from '../utils/resource'
 
 export default function Login() {
   const [username, setUsername] = useState('')
@@ -11,7 +12,7 @@ export default function Login() {
   const handleSubmit = (e: React.SyntheticEvent) => {
     if (username.trim() && password.trim()) {
       e.preventDefault()
-      console.log({ username, password })
+      handleLogin(username, password, nagivate)
       setPassword('')
       setUsername('')
     }
