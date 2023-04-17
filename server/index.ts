@@ -72,7 +72,6 @@ app.post('/schedule/create', (req, res) => {
 })
 
 // 展示调度
-
 app.post('/schedule/:id', (req, res) => {
   const { id } = req.params
   const result = database.filter(user => user.id === id)
@@ -87,6 +86,24 @@ app.post('/schedule/:id', (req, res) => {
   return res.json({
     error_message: 'Sign in again, an error occured...',
   })
+})
+
+// 用户数据
+app.post('/schedule/:username', (req, res) => {
+  const { username } = req.body
+  const result = database.filter(db => db.username === username)
+
+  if (result.length === 1) {
+    const schedultArray = result[0].schedule
+    const filteredArray = schedultArray.filter(sch => sch.startTime !== '')
+    return res.json({
+      message: 'Schedules successfully retrieved!',
+      schedules: filteredArray,
+      timezone: result[0].timezone,
+      receiverEmail: result[0].email,
+    })
+  }
+  return res.json({ error_message: 'User doesn\'t exist' })
 })
 
 app.listen(PORT, () => {

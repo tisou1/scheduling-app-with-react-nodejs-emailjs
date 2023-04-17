@@ -20,6 +20,9 @@ importers:
 
   client:
     dependencies:
+      '@emailjs/browser':
+        specifier: ^3.11.0
+        version: registry.npm.baidu-int.com/@emailjs/browser@3.11.0
       react:
         specifier: ^18.2.0
         version: registry.npm.baidu-int.com/react@18.2.0
@@ -249,6 +252,13 @@ packages:
     dependencies:
       '@jridgewell/trace-mapping': registry.npm.baidu-int.com/@jridgewell/trace-mapping@0.3.9
     dev: true
+
+  registry.npm.baidu-int.com/@emailjs/browser@3.11.0:
+    resolution: {integrity: sha512-RkY3FKZ3fPdK++OeF46mRTFpmmQWCHUVHZH209P3NE4D5sg2Atg7S2wa3gw5062Gl4clt4Wn5SyC4WhlVZC5pA==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@emailjs%2fbrowser/-/browser-3.11.0.tgz}
+    name: '@emailjs/browser'
+    version: 3.11.0
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   registry.npm.baidu-int.com/@emotion/babel-plugin@11.10.6:
     resolution: {integrity: sha512-p2dAqtVrkhSa7xz1u/m9eHYdLi+en8NowrmXeF/dKtJpU8lCWli8RUAati7NcSl0afsBott48pdnANuD0wh9QQ==, registry: http://registry.npm.baidu.com/, tarball: http://registry.npm.baidu-int.com/@emotion%2fbabel-plugin/-/babel-plugin-11.10.6.tgz}

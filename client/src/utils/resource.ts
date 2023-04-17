@@ -1,4 +1,5 @@
 import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
 import type { NavigateFunction } from 'react-router-dom'
 import type { Schedule } from '../components/Dashboard'
 
@@ -108,4 +109,66 @@ export async function handleCreateSchedule(
   catch (err) {
     console.error(err)
   }
+}
+
+export function fetchBookingDetails(
+  user,
+  setError,
+  setTimezone,
+  setSchedules,
+  setReceiverEmail,
+) {
+  fetch(`http://localhost:4000/schedule/${user}`, {
+    method: 'POST',
+    body: JSON.stringify({
+      username: user,
+    }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(res => res.json())
+    .then((data) => {
+      if (data.error_message) {
+        toast.error(data.error_message)
+        setError(true)
+      }
+      else {
+        setTimezone(data.timezone.label)
+        setSchedules(data.schedules)
+        setReceiverEmail(data.receiverEmail)
+      }
+    })
+    .catch(err => console.error(err))
+}
+
+export function sendEmail(receiverEmail,
+  email,
+  fullName,
+  message,
+  duration) {
+  emailjs
+    .send(
+      'YOUR_SERVICE_ID',
+      'template_lmue9ny',
+      {
+        to_email: receiverEmail,
+        from_email: email,
+        fullName,
+        message,
+        duration,
+      },
+      'ut9W_IccIYK2Pqals',
+    )
+    .then(
+      (result) => {
+        console.log(result.text)
+        toast.success('Session booked successfully!')
+      },
+      (error) => {
+        console.log(error.text)
+        toast.error(error.text)
+      },
+    )
 }
