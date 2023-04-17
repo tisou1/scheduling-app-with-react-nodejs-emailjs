@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import TimezoneSelect from 'react-timezone-select'
+import type { ITimezoneOption } from 'react-timezone-select'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { time } from '../utils/resource'
+import { handleCreateSchedule, time } from '../utils/resource'
+
+export interface Schedule {
+  day: string
+  startTime: string
+  endTime: string
+}
 
 export default function Dashboard() {
-  const [selectedTimezone, setSelectedTimezone] = useState({})
-  const [schedule, setSchedule] = useState([
+  const [selectedTimezone, setSelectedTimezone] = useState<ITimezoneOption | any>({})
+  const [schedule, setSchedule] = useState<Schedule[]>([
     { day: 'Sun', startTime: '', endTime: '' },
     { day: 'Mon', startTime: '', endTime: '' },
     { day: 'Tue', startTime: '', endTime: '' },
@@ -35,7 +42,7 @@ export default function Dashboard() {
   // 👇🏻 Logs the user's schedule to the console after setting the availability
   const handleSaveSchedules = () => {
     if (JSON.stringify(selectedTimezone) !== '{}')
-      console.log(schedule)
+      handleCreateSchedule(selectedTimezone, schedule, navigate)
 
     else
       toast.error('Select your timezone')

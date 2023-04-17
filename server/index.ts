@@ -1,16 +1,8 @@
 import express from 'express'
+import type { Database } from './interface'
 
 const app = express()
 const PORT = 4000
-
-interface Database {
-  id: string
-  username: string
-  password: string
-  email: string
-  timezone: {}
-  schedule: any[]
-}
 
 const database: Database[] = []
 function generateID() {
@@ -25,7 +17,7 @@ app.get('/api', (req, res) => {
     messgae: 'Hello world',
   })
 })
-
+// 注册
 app.post('/register', (req, res) => {
   const { username, password, email } = req.body
 
@@ -44,7 +36,7 @@ app.post('/register', (req, res) => {
 
   res.json({ error_message: 'User already exists!' })
 })
-
+// 登录
 app.post('/login', (req, res) => {
   const { username, password } = req.body
   const result = database.filter(
@@ -62,6 +54,38 @@ app.post('/login', (req, res) => {
       _id: result[0].id,
       _email: result[0].email,
     },
+  })
+})
+
+// 调度创建
+app.post('/schedule/create', (req, res) => {
+  const {
+    userId,
+    timezone,
+    schedule,
+  } = req.body
+
+  const result = database.filter(user => user.id === userId)
+  result[0].timezone = timezone
+  result[0].schedule = schedule
+  res.json({ message: 'OK' })
+})
+
+// 展示调度
+
+app.post('/schedule/:id', (req, res) => {
+  const { id } = req.params
+  const result = database.filter(user => user.id === id)
+  if (result.length === 1) {
+    return res.json({
+      message: 'Schedules successfully retrieved!',
+      schedules: result[0].schedule,
+      username: result[0].username,
+      timezone: result[0].timezone,
+    })
+  }
+  return res.json({
+    error_message: 'Sign in again, an error occured...',
   })
 })
 

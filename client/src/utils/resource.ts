@@ -1,4 +1,6 @@
 import { toast } from 'react-toastify'
+import type { NavigateFunction } from 'react-router-dom'
+import type { Schedule } from '../components/Dashboard'
 
 export const time = [
   { id: 'null', t: 'Select' },
@@ -16,8 +18,8 @@ export const time = [
   { id: '18', t: '18:00pm' },
   { id: '19', t: '19:00pm' },
 ]
-
-export async function handleRegister(email, username, password, navigate) {
+// 注册
+export async function handleRegister(email: string, username: string, password: string, navigate: NavigateFunction) {
   // ...data
   try {
     const request = await fetch('http://localhost:4000/register', {
@@ -48,7 +50,8 @@ export async function handleRegister(email, username, password, navigate) {
   }
 }
 
-export async function handleLogin(username, password, navigate) {
+// 登录
+export async function handleLogin(username: string, password: string, navigate: NavigateFunction) {
   // ...data
   try {
     const request = await fetch('http://localhost:4000/login', {
@@ -74,6 +77,33 @@ export async function handleLogin(username, password, navigate) {
       localStorage.setItem('_myEmail', data.data._email)
       navigate('/dashboard')
     }
+  }
+  catch (err) {
+    console.error(err)
+  }
+}
+
+// 创建调度
+export async function handleCreateSchedule(
+  selectedTimezone: string,
+  schedule: Schedule[],
+  navigate: NavigateFunction,
+) {
+// ...data
+  try {
+    await fetch('http://localhost:4000/schedule/create', {
+      method: 'POST',
+      body: JSON.stringify({
+        userId: localStorage.getItem('_id'),
+        timezone: selectedTimezone,
+        schedule,
+      }),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+    navigate(`/profile/${localStorage.getItem('_id')}`)
   }
   catch (err) {
     console.error(err)
