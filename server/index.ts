@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import type { Database } from './interface'
 
 const app = express()
@@ -9,6 +10,7 @@ function generateID() {
   return Math.random().toString(36).substring(2, 10)
 }
 
+app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -21,7 +23,7 @@ app.get('/api', (req, res) => {
 app.post('/register', (req, res) => {
   const { username, password, email } = req.body
 
-  const result = database.filter(user => user.email === email && user.username === username && user.password === password)
+  const result = database.filter(user => user.email === email || user.username === username)
   if (result.length === 0) {
     database.push({
       id: generateID(),
@@ -66,13 +68,16 @@ app.post('/schedule/create', (req, res) => {
   } = req.body
 
   const result = database.filter(user => user.id === userId)
+  console.log(result, '>>>>')
+  console.log(database, '++++')
+
   result[0].timezone = timezone
   result[0].schedule = schedule
   res.json({ message: 'OK' })
 })
 
 // 展示调度
-app.post('/schedule/:id', (req, res) => {
+app.get('/schedule/:id', (req, res) => {
   const { id } = req.params
   const result = database.filter(user => user.id === id)
   if (result.length === 1) {

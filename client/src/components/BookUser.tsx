@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchBookingDetails } from '../utils/resource'
-import { ErrorPage } from './ErrorPage'
+import ErrorPage from './ErrorPage'
 import type { Schedule } from './Dashboard'
 
 function BookUser() {

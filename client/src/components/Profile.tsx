@@ -18,7 +18,7 @@ export default function Profile() {
   useEffect(() => {
     function getUserDetails() {
       if (id) {
-        fetch(`http://localhost:4000/schedult/${id}`)
+        fetch(`http://localhost:4000/schedule/${id}`)
           .then(res => res.json())
           .then((data) => {
             setUsername(data.username)
